@@ -123,3 +123,30 @@ function mu_library_google($atts, $content = null, $code = "")
 }
 
 add_shortcode('mu_lib_google', 'mu_library_google');
+
+function mu_library_lending($atts)
+{
+    $html = '<form action="https://libids.marshall.edu/lending/illiadlending.dll" method="post" name="LendingLogon" class="f-wrap-1">';
+    $html .= '<input type="hidden" name="ILLiadForm" value="LendingLogon">';
+    $html .= '<div id="logonform" class="flex flex-col">';
+    $html .= '<div class="font-semibold mb-3">Login For Non-OCLC Libraries</div>';
+    $html .= '<label for="username">';
+    $html .= 'Username';
+    $html .= '</label>';
+    $html .= '<input id="username" name="Username" type="text" class="text-input mt-1" tabindex="1" />';
+    $html .= '<label for="password" class="mt-4">';
+    $html .= 'Password';
+    $html .= '</label>';
+    $html .= '<input id="password" name="Password" type="password" class="text-input mt-1" tabindex="2" />';
+    $html .= '<div class="mt-4">';
+    $html .= '<input type="submit" name="SubmitButton" value="Login ILLiad" class="btn btn-green" tabindex="3" />';
+    $html .= '<div class="mt-3 flex">';
+    $html .= '<div class="mr-2"><a href="https://libids.marshall.edu/lending/illiadlending.dll?Action=10&Form=84">Forgot Password?</a></div>';
+    $html .= '<div class="ml-1"><a href="http://www.marshall.edu/library/libids/lending_firsttime.asp">First-Time Registration?</a></div>';
+    $html .= '</div>';
+    $html .= '</div>';
+    $html .= '</div>';
+    $html .= '</form>';
+    return $html;
+}
+add_shortcode('mu_lib_lending', 'mu_library_lending');
