@@ -150,3 +150,51 @@ function mu_library_lending($atts)
     return $html;
 }
 add_shortcode('mu_lib_lending', 'mu_library_lending');
+
+function mu_library_hours()
+{
+    $html = '<script src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>';
+    $html .= '<script src="https://api3.libcal.com/js/hours_today.js"></script> ';
+    $html .= '<div id="s_lc_tdh_3239_0"></div> ';
+    $html .= '<script>';
+    $html .= '$(function(){ ';
+    $html .= 'var s_lc_tdh_3239_0 = new $.LibCalTodayHours( $("#s_lc_tdh_3239_0"), { iid: 3239, lid: 0, key: "5a1f79012208b63da67ca021793bed6e" }); ';
+    $html .= '})';
+    $html .= '</script> ';
+    
+    $html .= '<!-- Please note: The following styles are optional, feel free to modify! //-->';
+    $html .= '<style>';
+    $html .= '.s-lc-w-today { border-spacing: 0; border-collapse: collapse; width: 100%; }.s-lc-w-today td, .s-lc-w-today th { padding: 8px 5px; }';
+    $html .= '.s-lc-w-head { text-align: center; border-bottom: 1px solid #ddd; }';
+    $html .= '.s-lc-w-loading { margin-top: 80px; text-align: center; }';
+    $html .= '.s-lc-w-sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); border: 0; }';
+    $html .= '.s-lc-w-btn { line-height: 1.5; border-radius: 3px; display: inline-block; padding: 3px 6px; margin-bottom: 0; font-size: 12px; font-weight: 400; text-align: center; white-space: nowrap; vertical-align: middle; touch-action: manipulation; cursor: pointer; user-select: none; border: 1px solid #ccc; color: #333; background-color: #fff; }';
+    $html .= '.s-lc-w-btn:active, .s-lc-w-btn:hover { color: #333; background-color: #d4d4d4; border-color: #8c8c8c; }';
+    $html .= '.s-lc-w-previous { float: left;}';
+    $html .= '.s-lc-w-next { float: right; }';
+    $html .= '.s-lc-w-location td { font-weight: bold; }';
+    $html .= '.s-lc-w-department .s-lc-w-name { padding-left: 20px; }';
+    $html .= '.s-lc-w-times { border-bottom: 1px solid #ddd; }';
+    $html .= '.s-lc-w-today-view-link { text-decoration: none; }';
+    $html .= '.s-lc-w-today-view-all { padding: 8px 5px; }';
+    $html .= '</style>';
+    return $html;
+}
+add_shortcode('mu_library_hours', 'mu_library_hours');
+
+function mu_library_news()
+{
+    $html = '<script type="text/javascript" src="//lgapi-us.libapps.com/web/jquery/js/1.12.1_jquery.min.js"></script>';			
+    $html .= '<script src="//lgapi-us.libapps.com/sa.php?site_id=776" onload="jQuery(window).on(\'load\', function() {springSpace.springTrack.init({_st_site_id: \'776\'});});"></script>';
+    $html .= '<script>springSpace.Common = springSpace.Common || { };';
+    $html .= 'springSpace.Common.constant = { PROCESSING: { ACTION_DISPLAY_POLL: 159}};';
+    $html .= 'springSpace.Common.baseURL = "//lgapi-us.libapps.com/";';
+    $html .= 'springSpace.Common.apiLoad = true;</script><script>';
+    $html .= 'springshare_widget_config_1532711872440 = { path: \'boxes/19485882\' };';
+    $html .= '</script>';
+    $html .= '<div id="s-lg-widget-1532711872440"></div>';
+    $html .= '<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?\'http\':\'https\';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://lgapi-us.libapps.com/widgets.php?site_id=776&widget_type=8&output_format=1&widget_title=Library+News&widget_height=&widget_width=&widget_embed_type=1&guide_id=849428&box_id=19485882&map_id=22861257&content_only=0&config_id=1532711872440";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","s-lg-widget-script-1532711872440");</script>';
+    return $html;
+
+}
+add_shortcode('mu_library_news', 'mu_library_news');
