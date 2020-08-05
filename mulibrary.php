@@ -161,7 +161,7 @@ function mu_library_hours()
     $html .= 'var s_lc_tdh_3239_0 = new $.LibCalTodayHours( $("#s_lc_tdh_3239_0"), { iid: 3239, lid: 0, key: "5a1f79012208b63da67ca021793bed6e" }); ';
     $html .= '})';
     $html .= '</script> ';
-    
+
     $html .= '<!-- Please note: The following styles are optional, feel free to modify! //-->';
     $html .= '<style>';
     $html .= '.s-lc-w-today { border-spacing: 0; border-collapse: collapse; width: 100%; }.s-lc-w-today td, .s-lc-w-today th { padding: 8px 5px; }';
@@ -184,7 +184,7 @@ add_shortcode('mu_library_hours', 'mu_library_hours');
 
 function mu_library_news()
 {
-    $html = '<script type="text/javascript" src="//lgapi-us.libapps.com/web/jquery/js/1.12.1_jquery.min.js"></script>';			
+    $html = '<script type="text/javascript" src="//lgapi-us.libapps.com/web/jquery/js/1.12.1_jquery.min.js"></script>';
     $html .= '<script src="//lgapi-us.libapps.com/sa.php?site_id=776" onload="jQuery(window).on(\'load\', function() {springSpace.springTrack.init({_st_site_id: \'776\'});});"></script>';
     $html .= '<script>springSpace.Common = springSpace.Common || { };';
     $html .= 'springSpace.Common.constant = { PROCESSING: { ACTION_DISPLAY_POLL: 159}};';
@@ -198,3 +198,12 @@ function mu_library_news()
 
 }
 add_shortcode('mu_library_news', 'mu_library_news');
+
+function mu_writing_center()
+{
+    $html = '<div id="libchat_52d9d6bb25ec8650faa9fa970900c2d3"></div>';
+    $html .= '<script type="text/javascript" src="https://v2.libanswers.com/load_chat.php?hash=52d9d6bb25ec8650faa9fa970900c2d3"></script>';
+    return $html;
+
+}
+add_shortcode('mu_writing_center', 'mu_writing_center');
