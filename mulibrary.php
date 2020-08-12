@@ -199,11 +199,18 @@ function mu_library_news()
 }
 add_shortcode('mu_library_news', 'mu_library_news');
 
-function mu_writing_center()
+function mu_libchat( $atts, $content = null )
 {
-    $html = '<div id="libchat_52d9d6bb25ec8650faa9fa970900c2d3"></div>';
-    $html .= '<script type="text/javascript" src="https://v2.libanswers.com/load_chat.php?hash=52d9d6bb25ec8650faa9fa970900c2d3"></script>';
+
+    $data = shortcode_atts( array(
+		'class' => '',
+		'div_id' => '',
+		'script_src' => '',
+	), $atts );
+
+    $html = '<div id="' . esc_attr( $data['div_id'] ) . '"></div>';
+    $html .= '<script src="' . esc_attr( $data['script_src'] ) . '"></script>';
     return $html;
 
 }
-add_shortcode('mu_writing_center', 'mu_writing_center');
+add_shortcode('mu_libchat', 'mu_libchat');
