@@ -201,17 +201,16 @@ add_shortcode('mu_library_news', 'mu_library_news');
 
 function mu_libchat( $atts, $content = null )
 {
+
     $data = shortcode_atts( array(
 		'class' => '',
 		'div_id' => '',
-        'script_src' => '',
-        'src' => '',
-        'hash' => ''
+		'script_src' => '',
 	), $atts );
 
-
-    // https://marshall.libanswers.com/load_chat.php?hash=
-    $html = '<div class="hidden">asfd' . $data['hash'] . '</div>';
+    $html = '<div id="' . esc_attr( $data['div_id'] ) . '"></div>';
+    $html .= '<script src="' . esc_url( $data['script_src'] ) . '"></script>';
     return $html;
+
 }
 add_shortcode('mu_libchat', 'mu_libchat');
