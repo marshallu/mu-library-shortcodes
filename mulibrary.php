@@ -210,7 +210,6 @@ function mu_libchat( $atts, $content = null )
 	), $atts );
 
     $html = '<div id="' . esc_attr( $data['div_id'] ) . '"></div>';
-    $html .= '<script src="' . esc_url( $data['src'] ) . '"></script>';
     $html .= '<div class="hidden">asfd' . $data['src'] . '</div>';
     return $html;
 }
