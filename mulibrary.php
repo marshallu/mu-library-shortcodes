@@ -8,12 +8,12 @@ Version: 1.0
 */
 
 // Shortcode for Slideshow Text
-// function mu_library_libanswers_chat($atts, $content = null, $code = "")
-// {
-//     return '<div id="libchat_4f14fd47cdca1c40b9b0b3565ec5696c"></div><p><script src="https://v2.libanswers.com/load_chat.php?hash=4f14fd47cdca1c40b9b0b3565ec5696c"></script></p>';
-// }
+function mu_library_libanswers_chat($atts, $content = null, $code = "")
+{
+    return '<div id="libchat_4f14fd47cdca1c40b9b0b3565ec5696c"></div><p><script src="https://v2.libanswers.com/load_chat.php?hash=4f14fd47cdca1c40b9b0b3565ec5696c"></script></p>';
+}
 
-// add_shortcode('mu_lib_chat', 'mu_library_libanswers_chat');
+add_shortcode('mu_lib_chat', 'mu_library_libanswers_chat');
 
 // Shortcode for Summon Database Search
 function mu_library_summon($atts, $content = null, $code = "")
@@ -208,9 +208,9 @@ function mu_libchat( $atts, $content = null )
 		'script_src' => '',
 	), $atts );
 
-    $html = '<div id="' . esc_attr( $data['div_id'] ) . '"></div>';
+    // $html = '<div id="' . esc_attr( $data['div_id'] ) . '"></div>';
     $html .= '<script src="' . esc_url( $data['script_src'] ) . '"></script>';
-    $html .= '<div class="hidden">' . $data['script_src'] . '</div>';
+    // $html .= '<div class="hidden">' . $data['script_src'] . '</div>';
     return $html;
 
 }
