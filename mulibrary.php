@@ -206,11 +206,11 @@ function mu_libchat( $atts, $content = null )
 		'div_id' => '',
         'script_src' => '',
         'src' => '',
-
+        'hash' => ''
 	), $atts );
 
     $html = '<div id="' . esc_attr( $data['div_id'] ) . '"></div>';
-    $html .= '<div class="hidden">asfd' . $data['src'] . '</div>';
+    $html .= '<div class="hidden">asfd' . $data['hash'] . '</div>';
     return $html;
 }
 add_shortcode('mu_libchat', 'mu_libchat');
