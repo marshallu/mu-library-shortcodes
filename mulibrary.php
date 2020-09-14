@@ -205,12 +205,14 @@ function mu_libchat( $atts, $content = null )
     $data = shortcode_atts( array(
 		'class' => '',
 		'div_id' => '',
-		'script_src' => '',
+        'script_src' => '',
+        'src' => '',
+
 	), $atts );
 
-    // $html = '<div id="' . esc_attr( $data['div_id'] ) . '"></div>';
-    $html .= '<script src="' . esc_url( $data['script_src'] ) . '"></script>';
-    // $html .= '<div class="hidden">' . $data['script_src'] . '</div>';
+    $html = '<div id="' . esc_attr( $data['div_id'] ) . '"></div>';
+    $html .= '<script src="' . esc_url( $data['src'] ) . '"></script>';
+    $html .= '<div class="hidden">' . $data['src'] . '</div>';
     return $html;
 
 }
