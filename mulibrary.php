@@ -209,8 +209,9 @@ function mu_libchat( $atts, $content = null )
         'hash' => ''
 	), $atts );
 
-    $html = '<div id="' . esc_attr( $data['div_id'] ) . '"></div>';
-    $html .= '<div class="hidden">asfd' . $data['hash'] . '</div>';
+
+    // https://marshall.libanswers.com/load_chat.php?hash=
+    $html = '<div class="hidden">asfd' . $data['hash'] . '</div>';
     return $html;
 }
 add_shortcode('mu_libchat', 'mu_libchat');
