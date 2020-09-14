@@ -201,7 +201,6 @@ add_shortcode('mu_library_news', 'mu_library_news');
 
 function mu_libchat( $atts, $content = null )
 {
-
     $data = shortcode_atts( array(
 		'class' => '',
 		'div_id' => '',
@@ -212,8 +211,7 @@ function mu_libchat( $atts, $content = null )
 
     $html = '<div id="' . esc_attr( $data['div_id'] ) . '"></div>';
     $html .= '<script src="' . esc_url( $data['src'] ) . '"></script>';
-    $html .= '<div class="hidden">' . $data['src'] . '</div>';
+    $html .= '<div class="hidden">asfd' . $data['src'] . '</div>';
     return $html;
-
 }
 add_shortcode('mu_libchat', 'mu_libchat');
