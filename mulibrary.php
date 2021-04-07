@@ -78,7 +78,7 @@ function mu_library_credo($atts, $content = null, $code = "")
     $html .= '<input class="text-input w-full" maxlength="255" name="qbasic"  type="text"  id="Text2" value="" placeholder="Search Credo Reference"  aria-labelledby="Text2" />';
     $html .= '<div class="flex justify-between mt-4">';
     $html .= '<input type="submit" name="submit" value="Search" class="btn btn-green mr-2" title="Enter a search term and click \'Search\' to get results."  />';
-    $html .= '<a href="http://search.credoreference.com/search/advanced">Credo Advanced</a> ';
+    $html .= '<a href="https://marshall.idm.oclc.org/login?url=https://search.credoreference.com">Credo Advanced</a> ';
     $html .= '</div>';
     $html .= '<script type="text/javascript">function credoMultiSearchBasic(f){if(f.qbasic.value==\'Search for...\'||f.qbasic.value==\'\'){alert(\'Please enter a search.\');}else{var qbasic=escape(f.qbasic.value);var ubasic=f.ubasic.value.replace("{0}",qbasic);window.open(ubasic,"_blank");}return false;}</script>';
     $html .= '</form>';
